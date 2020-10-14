@@ -9,20 +9,29 @@ window.onload = () => {
     }
 
     for (let i = 0; i < 6; i++) {
-        let chorelist = document.getElementById("chorelist")
+        let choretable = document.getElementById("choretable")
 
-        let li = document.createElement("li")
-        li.innerHTML = `${order[i]} - ${chores[i]}`
-        chorelist.append(li)
+        let tr = document.createElement("tr")
+
+        let name = document.createElement("th")
+        name.setAttribute("scope", "row")
+        name.innerHTML = order[i]
+
+        let chore = document.createElement("td")
+        chore.innerHTML = chores[i]
+
+        tr.appendChild(name)
+        tr.appendChild(chore)
+
+        choretable.appendChild(tr)
     }
 
 }
 
 //get a number based on how many weeks it has been since the chore chart started
 function getWeek() {
-    // let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     var now = moment(new Date()); //todays date
-    var end = moment("2020-10-11"); // another date
+    var end = moment("2020-10-11"); // start date
     var duration = moment.duration(now.diff(end));
     var weeks = duration.asWeeks();
     if (weeks < 6) return weeks

@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script> src="/index.js"</script>
+        <script src="/index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
-    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> 
+
         <title>Chores</title>
     </head>
     <body>
-        <ul id="chorelist">
-
-        </ul>
+        <div class="container">
+            <div class="page-header" style="font-family: 'Cinzel', serif; text-align:center;">
+                <h1>THE CHORE CHART</h1>
+            </div>
+        </div>
+        <br><br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Chore</th>
+              </tr>
+            </thead>
+            <tbody id="choretable">
+              <!-- <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr> -->
+            </tbody>
+          </table>
     </body>
 </html>
